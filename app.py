@@ -4,6 +4,18 @@ import shap
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit as st
+
+hide_github_info = """
+    <style>
+    /* 隐藏侧边栏的 github 信息部分 */
+    [data-testid="stSidebar"] a:first-child {
+        display: none;
+    }
+    </style>
+"""
+st.markdown(hide_github_info, unsafe_allow_html=True)
+
 
 
 default_values = [
