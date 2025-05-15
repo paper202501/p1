@@ -6,17 +6,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-hide_github_info = """
-    <style>
-    /* 隐藏侧边栏的 github 信息部分 */
-    [data-testid="stSidebar"] a:first-child {
-        display: none;
-    }
-    </style>
+hide_streamlit_style = """
+<style>
+footer {visibility: hidden;}
+</style>
 """
-st.markdown(hide_github_info, unsafe_allow_html=True)
-
-
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 default_values = [
     0.0, 0, 127.2635061594643, 10.60798788070679, 0.7694719318184242, 0.9660658108666664,
