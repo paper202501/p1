@@ -1,9 +1,21 @@
-import streamlit as st
+# import streamlit as st
 import joblib
 import shap
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+import streamlit as st
+
+# 插入自定义 CSS 样式来隐藏 footer
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 default_values = [
     0.0, 0, 127.2635061594643, 10.60798788070679, 0.7694719318184242, 0.9660658108666664,
